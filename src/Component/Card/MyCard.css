@@ -1,0 +1,14 @@
+.g_Movies_card
+{
+    height: 280px ;
+
+}
+.g_Movies_card img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    padding: 5px ;
+}
+ 

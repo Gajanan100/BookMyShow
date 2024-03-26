@@ -1,0 +1,71 @@
+
+.g_descriptions
+{ 
+    text-align: justify;
+}
+.g_box_opacity
+{
+    opacity: 0.5;
+}
+.g_box_opacity:hover
+{
+    opacity: 1;
+}
+.g_menu_link_text h6
+{
+    opacity: 0.5;
+}
+.g_menu_link_text span
+{
+    opacity: 0.5;
+}
+.g_menu_link_text span:hover{
+    opacity: 1;
+    cursor: pointer;
+    position: sticky;
+    z-index: 2px;
+}
+
+.g_bookmyshow_border {
+    border-top: 1px solid #868686;
+    width: 96%;
+    margin: auto;
+    padding: 10px 0px;
+}
+.g_bottom_logo {
+    top: -80% !important;
+}
+.g_icons
+{
+    width: 35px ;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #868686;
+    color: #333338;
+    cursor: pointer;
+}
+.g_icons:hover
+{
+    background-color: white;
+    cursor: pointer;
+}
+.g_copyright {
+    width: 97%;
+    margin:  auto;
+    padding: 15px 0px;
+}
+
+.g_copyright p {
+    margin: 0;
+}
+.g_social_text_p
+{
+    color: #666666;
+}
+
+
+

@@ -1,0 +1,31 @@
+.g_promated_banner_top
+{
+   background-size: cover !important;
+   width: 100%;
+   background-repeat: no-repeat !important;
+   background-position: center !important; 
+
+}
+
+.g_Promoted_banner {
+    background: rgb(0, 0, 0);
+    height: 100%;
+    background: linear-gradient(95deg, rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.g_Promoted_banner .g_img_box{
+    height: 440px;
+    width: 100%;
+    padding: 15px;
+}
+.g_Promoted_banner .g_img_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.g_Promoted_banner  .g_description{
+    line-height: 25px;
+    font-size: 14px;
+
+}
