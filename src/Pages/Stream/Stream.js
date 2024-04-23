@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-
 import "./Stram.css";
 import { PromotedBanner } from "./PromotedBanner";
+import { MultiMoviesCard } from "../../Component/MultiMoviesCard/MultiMoviesCard";
 
 const data = [
     {
@@ -74,6 +74,54 @@ export const Stream = () => {
 
                 })}
             </Carousel>
+            <div className="my-5 container">
+                <MultiMoviesCard
+                    title={"New On Stream"}
+                    isShowAll
+                    srcData={[
+                        "Stream/et00045012-lcuwrczste-portrait.avif",
+                        "Stream/et00064456-nsmmdnjxhu-portrait.avif",
+                        "Stream/et00136633-jhwzvneqzj-portrait.avif",
+                        "Stream/et00311482-gwsytlwbzf-portrait.avif",
+                        "Stream/et00355495-svcwmsykts-portrait.avif",
+                        "Stream/et00374217-rletlcmmwb-portrait.avif",
+                        "Stream/et00375448-svjynltphm-portrait.avif",
+                        "Stream/et00384838-mtbcqkwfrw-portrait.avif",
+                        "Stream/et00385306-xymkpjpadx-portrait.avif",
+                    ]}
+                />
+                <MultiMoviesCard
+                    title={"New On Stream"}
+                    isShowAll
+                    srcData={[
+                        "Stream/et00045012-lcuwrczste-portrait.avif",
+                        "Stream/et00064456-nsmmdnjxhu-portrait.avif",
+                        "Stream/et00136633-jhwzvneqzj-portrait.avif",
+                        "Stream/et00311482-gwsytlwbzf-portrait.avif",
+                        "Stream/et00355495-svcwmsykts-portrait.avif",
+                        "Stream/et00374217-rletlcmmwb-portrait.avif",
+                        "Stream/et00375448-svjynltphm-portrait.avif",
+                        "Stream/et00384838-mtbcqkwfrw-portrait.avif",
+                        "Stream/et00385306-xymkpjpadx-portrait.avif",
+                    ]}
+                />
+                <MultiMoviesCard            
+                title={"New On Stream"}
+                isShowAll
+                srcData={[
+                    "Stream/et00045012-lcuwrczste-portrait.avif",
+                    "Stream/et00064456-nsmmdnjxhu-portrait.avif",
+                    "Stream/et00136633-jhwzvneqzj-portrait.avif",
+                    "Stream/et00311482-gwsytlwbzf-portrait.avif",
+                    "Stream/et00355495-svcwmsykts-portrait.avif",
+                    "Stream/et00374217-rletlcmmwb-portrait.avif",
+                    "Stream/et00375448-svjynltphm-portrait.avif",
+                    "Stream/et00384838-mtbcqkwfrw-portrait.avif",
+                    "Stream/et00385306-xymkpjpadx-portrait.avif",
+                ]}
+            />
+            </div>
+
         </section>
     );
 }

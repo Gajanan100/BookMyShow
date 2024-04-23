@@ -60,7 +60,7 @@ export const Header = () => {
             <div className='row justify-content-between'>
                 <div className='col-12 col-md-5 '>
                     <ul className='gap-3 d-flex justify-content-center'>
-                        <li>
+                         <li>
                              <NavLink to={"/"} >Movies</NavLink>
                         </li>
                         <li>
@@ -77,7 +77,7 @@ export const Header = () => {
                         </li>
                         <li>
                            <NavLink to={'/acitivities'}>Acitivities</NavLink>         
-                        </li>
+                        </li> 
                     </ul>
                 </div>
 
@@ -87,12 +87,12 @@ export const Header = () => {
                             <NavLink to={'/show'}> <span>ListYourShow</span></NavLink>
                         </li>
                         <li>
-                        <NavLink to={'/Corporates'}> <span>Corporates</span></NavLink>
+                        <NavLink to={'/corporates'}> <span>Corporates</span></NavLink>
 
                         </li>
                         <li>
                         <NavLink to={'/offers'}> <span>Offers</span></NavLink>
-                        </li>
+                        </li> 
                         <li>
                         <NavLink to={'/gift '}> <span>Gift Cards</span></NavLink>
                         </li>

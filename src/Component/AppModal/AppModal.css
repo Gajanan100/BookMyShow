@@ -1,0 +1,38 @@
+
+.g_app_modal_box{
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    background: #80808061;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+.g_app_modal_box .g_modal_content_box
+{
+    position: relative;
+    animation: modalAnimation 0.25s;
+}
+@keyframes modalAnimation {
+    0% {
+        transform: translateY(600px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+ .g_app_modal_box .g_close_btn
+ {
+   position: absolute;
+   top: 0px !important;
+   right: 15px;
+   font-size: 20px;
+   cursor: pointer;
+   opacity: 0.8;
+
+ }
