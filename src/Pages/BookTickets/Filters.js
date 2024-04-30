@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import { useLocation } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 import MyDropdown from "../../Component/MyDropdown/MyDropdown";
-import { removeSpecialCharacters } from "../../lib/helpers";
+// import { removeSpecialCharacters } from "../../lib/helpers";
+import { GlobalContext } from "../../Provider/Provider";
 
 const responsive = {
   superLargeDesktop: {
@@ -35,10 +36,14 @@ function BoxDate({ day, date, month, isActive = false }) {
 }
 
 const Filters = () => {
-  const { state, search } = useLocation();
+  const {values}=useContext(GlobalContext)
+  console.log(values);
+  const { state } = useLocation();
   const [dateData, setdateData] = useState([]);
   let date = new Date().getDate();
-  const params = new URLSearchParams(search)
+  // const params = new URLSearchParams(search)
+  const {selectedLangFormat }=values?.ticketBooking
+  
 
   // console.log(date);
   useEffect(() => {
@@ -106,7 +111,8 @@ const Filters = () => {
             <div className="col-12 col-md-4 ">
               <div className="d-flex justify-content-between text-center align-item-center h-100  mt-3 fw-bold g_font_14">
                 <div>
-                {params.get("language")}-{removeSpecialCharacters(params.get("screen"))}
+                {/* {params.get("language")}-{removeSpecialCharacters(params.get("screen"))} */}
+                {selectedLangFormat?.lang} - {selectedLangFormat?.format}
                 </div>
                 <div className="fw-muted">
                   <FaAngleDown color="grey" opacity={0.7} />

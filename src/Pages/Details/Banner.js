@@ -1,10 +1,10 @@
 
 import { IoMdStar } from "react-icons/io";
 import { HiOutlineChevronRight } from "react-icons/hi2";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
 import { MdOutlineShare } from "react-icons/md";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { eleCommaTitle, redirectValidPath } from "../../lib/helpers";
 import AppModal from "../../Component/AppModal/AppModal";
 import { useContext, useState } from "react";
@@ -14,7 +14,7 @@ import { UPDATE_BOOKING_DETAILS } from "../../Provider/Actions";
 const Banner = () => {
   const { values, dispatch } = useContext(GlobalContext);
   const [selectedLangFormat, setSelectedLangFormat] = useState({ lang: null, format: null })
-  console.log(selectedLangFormat);
+  // console.log(selectedLangFormat);
 
   // console.log(values);
   // const navigate = useNavigate();
@@ -57,30 +57,36 @@ const Banner = () => {
           <h6 className="mt-0 g_font_16">Select Language and format</h6>
         </div>
         <div style={{ background: "#F2F5F9" }} className="p-2 my-3 px-3">
-          {availableLanguages?.map((ele, index, arrData) => {
-            return (
-              <span
-                key={ele}
-                onClick={()=>setSelectedLangFormat({lang:ele,format:null})}
-                className="text-secondary"
-              >
-                {eleCommaTitle(ele, index, arrData)}
-              </span>
-            );
-          })}
+        {availableLanguages?.map((ele, index, arrData) => {
+                        return (
+                            <span
+                                key={ele}
+                                onClick={() => {
+                                    setSelectedLangFormat({ lang: ele, format: null })
+                                    dispatch({ type: UPDATE_BOOKING_DETAILS, payload: { ...values?.ticketBooking, selectedLangFormat: { lang: ele, format: null } } })
+                                }}
+                                className={`${selectedLangFormat.lang === ele ? "text-primary" : "text-secondary"} g_cursor_pointer`}
+                            >
+                                {eleCommaTitle(ele, index, arrData)}
+                            </span>
+                        );
+                    })}
         </div>
         <div className="d-flex gap-2 align-items-center px-1 g_font_12">
           {availableScreen?.map((ele) => {
             return (
               <NavLink
-                to={"/booktickets"
-                }
-                onClick={()=>setSelectedLangFormat({...setSelectedLangFormat,format:ele})}
-                key={ele}
-                className="g_card_text border text-decoration-none p-2 rounded-pill px-4"
-              >
-                {ele}
-              </NavLink>
+              to={"/booktickets"}
+              key={ele}
+              onClick={() => {
+                  setSelectedLangFormat({ ...selectedLangFormat, format: ele })
+                  dispatch({ type: UPDATE_BOOKING_DETAILS, payload: { ...values?.ticketBooking, selectedLangFormat: { ...selectedLangFormat, format: ele } } })
+              }}
+              className={`${selectedLangFormat.format === ele ? "g_card_text" : "text-secondary"}  border text-decoration-none p-2 rounded-pill px-4`}
+          >
+              {ele}
+          </NavLink>
+
             );
           })}
         </div>

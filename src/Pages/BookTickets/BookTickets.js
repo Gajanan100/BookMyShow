@@ -1,18 +1,20 @@
 import React, { useContext } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import "./BookTickets.css";
 import "react-multi-carousel/lib/styles.css";
 import Filters from "./Filters";
 import { GlobalContext } from "../../Provider/Provider";
+import Theaters from "./Theaters";
 
 const BookTickets = () => {
-  const { state, search } = useLocation();
+  // const { state, search } = useLocation();
   // const {values } = useContext(GlobalContext)
   // console.log(values);
-  const params = new URLSearchParams(search);
+  // const params = new URLSearchParams(search);
   const {values}=useContext(GlobalContext)
+  console.log(values);
   if (!values?.ticketBooking) return null
-  const { name, category, certification, selectedLangFormat } = values?.ticketBooking
+  const { name, category, certification,selectedLangFormat } = values?.ticketBooking
   console.log(values?.ticketBooking,"i am Gajanan Chavan")
 
 
@@ -51,6 +53,10 @@ const BookTickets = () => {
             <Filters />
           </div>
         </div>
+      </div>
+      <div className="my-2 bg-white container p-0">
+        <Theaters/>
+
       </div>
     </div>
   );

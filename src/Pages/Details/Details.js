@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import Banner from "./Banner";
 import "./Details.css";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { CastsAndCrew } from "./CastsAndCrew";
 import { GlobalContext } from "../../Provider/Provider";
 
 export const Details = () => {
-  const { state } = useLocation();
+  // const { state } = useLocation();
   // const { values } = useContext(GlobalContext)
     const {values}=useContext(GlobalContext)
     console.log(values);
