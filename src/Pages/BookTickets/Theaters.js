@@ -6,14 +6,15 @@ import { BsExclamationCircle } from "react-icons/bs";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { GlobalContext } from '../../Provider/Provider';
 import AppModal from '../../Component/AppModal/AppModal';
-import PriceAndTime from './PriceAndTime';
 import SelectSeats from './SelectSeats';
+import PriceAndTime from './PriceAndTime';
 // import SelectSeats from './SelectSeats';
 const Theaters = () => {
     const [isFillHeart, setIsFillHeart] = useState(false)
     const [openTicketModal, setOpenTicketModal] = useState(false)
     const { values } = useContext(GlobalContext)
     const { shows } = values?.ticketBooking
+    console.log(shows);
 
     function heartHandlerEnter() {
         setIsFillHeart(true)
@@ -66,22 +67,9 @@ const Theaters = () => {
                 </div>
                 <div className="col-12 col-md-5 ">
                     <div className="d-flex flex-wrap gap-3">
-                        {/* {shows?.map((ele) => {
+                        {shows?.map((ele) => {
                             return <PriceAndTime key={ele} onClick={() => setOpenTicketModal(true)} > {ele}</PriceAndTime>
-                        })} */}
-      <div className="mt-1 mb-1 px-4 d-flex align-items-center justify-content-center gap-4">
-        <div className="g_font_12">
-          <p className="m-0 text-secondary">Platinum</p>
-          <h6 className=" g_font_10 fw-bold ">RS. 100</h6>
-          <h6 className=" g_font_12 text-success ">Available</h6>
-        </div>
-        <div className="g_font_12">
-          <p className="m-0 text-secondary">Platinum</p>
-          <h6 className=" g_font_10 fw-bold ">RS. 150</h6>
-          <h6 className="g_font_12 text-success">Available</h6>
-        </div>
-    </div>
-
+                        })}
 
                     </div>
                     <div className=' d-flex mt-2 align-items-center text-secondary  gap-1'>
