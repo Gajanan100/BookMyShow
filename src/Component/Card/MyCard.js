@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./MyCard.css";
 import { GlobalContext } from "../../Provider/Provider";
 import { UPDATE_MOVIES_DETAILS } from "../../Provider/Actions";
@@ -17,11 +17,11 @@ export const MyCard = ({
   // const navigate = useNavigate();
   const { dispatch } = useContext(GlobalContext);
   console.log(dispatch);
-  const redirectUrlHandler = () => {
-    if (movieDetails) {
-      // navigate("/details", { state: { ...movieDetails, name } });
-    }
-  };
+  // const redirectUrlHandler = () => {
+  //   if (movieDetails) {
+  //     // navigate("/details", { state: { ...movieDetails, name } });
+  //   }
+  // };
   return (
     <Link
       to={"/details"}
