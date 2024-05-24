@@ -46,7 +46,7 @@ const BookTickets = () => {
             </div>
           </div>
         </div>
-        {/* movies calender */}
+        {/* movies calender on BookMy Show */}
 
         <div className="border-top ">
           <div className="container">
@@ -56,7 +56,7 @@ const BookTickets = () => {
       </div>
       <div className="my-2 bg-white container p-0">
         <Theaters/>
-
+       <h6>Book</h6>
       </div>
     </div>
   );
